@@ -1281,6 +1281,10 @@ input:focus-within + svg {
   .our-customers-section {
     padding: 120px 0;
   }
+  .our-customers-container {
+    min-width: 1156px;
+    padding: 0 15px;
+  }
   .our-customers-list {
     flex-wrap: nowrap;
     gap: 24px;
@@ -1301,7 +1305,7 @@ input:focus-within + svg {
     flex-wrap: nowrap;
   }
   .footer-logo-container {
-    margin-right: 120px;
+    margin-right: auto;
   }
   .footer-form-container {
     width: auto;
