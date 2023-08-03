@@ -1204,6 +1204,17 @@ input:focus-within + svg {
     letter-spacing: 0.02em;
   }
 
+  @media (min-resolution: 192dpi) {
+    .hero-section {
+      background-color: var(--navyBlueColor);
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office@2x.jpg);
+    }
+  }
+
   .hero-section {
     padding: 188px 0;
     background-color: var(--navyBlueColor);
