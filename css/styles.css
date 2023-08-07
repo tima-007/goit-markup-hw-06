@@ -498,14 +498,12 @@ button {
 /* -------------------- Portfolio links --------------------  */
 
 .portfolio-item {
-  max-width: 396px;
   margin: 0 auto;
-  border-top: none;
-  border: 1px solid var(--cornflower, #e7e9fc);
-  background: var(--white, #fff);
+  max-width: 396px;
+  background: var(--whiteColor);
 }
 .portfolio-item:not(:last-child) {
-  margin-bottom: 48px;
+  margin: 0 auto 48px auto;
 }
 
 .portfolio-list-header {
@@ -541,7 +539,9 @@ button {
 }
 
 .portfolio-item-text-container {
-  margin: 32px 16px;
+  padding: 32px 16px;
+  border: 1px solid var(--cornflowerColor);
+  border-top: none;
 }
 
 .portfolio-img {
@@ -621,7 +621,6 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
-  /* margin-right: 0; */
 }
 
 .footer-social-list-container {
@@ -959,9 +958,11 @@ input:focus-within + svg {
 }
 .burger-menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   transform: translateX(100%);
   background-color: var(--whiteColor);
   padding: 80px 35px 40px 40px;
@@ -1000,10 +1001,9 @@ input:focus-within + svg {
   display: inline-flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 284px;
+  margin-bottom: auto;
 }
-.burger-menu-item {
-}
+
 .burger-menu-link-studio,
 .burger-menu-link-portfolio {
   color: var(--oceanColor);
@@ -1026,16 +1026,18 @@ input:focus-within + svg {
   color: var(--oceanColor);
 }
 
+.burger-address {
+  margin-bottom: 48px;
+}
+
 .burger-address-list {
   display: inline-flex;
   flex-direction: column;
-  margin-bottom: 48px;
 }
 .burger-address-list:not(last-child) {
   gap: 40px;
 }
-.burger-address-item {
-}
+
 .burger-address-tel {
   color: var(--irisColor);
   font-size: 36px;
@@ -1069,7 +1071,6 @@ input:focus-within + svg {
 
 .burger-social-list {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 56px;
 }
@@ -1118,7 +1119,8 @@ input:focus-within + svg {
   .our-customers-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 72px;
   }
   .our-customers-item {
     flex-basis: calc((100% - 16px) / 2);
@@ -1134,10 +1136,17 @@ input:focus-within + svg {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1157px) {
+  .our-team-section .container,
+  .our-customers-section .container,
+  .footer .container {
+    width: 584px;
+  }
+}
+
 @media (min-width: 768px) {
-  .container {
+  .portfolio-section .container {
     width: 768px;
-    padding: 0 16px;
   }
   .burger-button {
     display: none;
@@ -1181,6 +1190,10 @@ input:focus-within + svg {
     margin: 0;
   }
 
+  .our-work-header {
+    text-align: left;
+  }
+
   /* --------- */
 
   .portfolio-section {
@@ -1196,21 +1209,17 @@ input:focus-within + svg {
     row-gap: 72px;
     column-gap: 24px;
   }
+
   .portfolio-item {
     margin: 0;
     width: calc((100% - 24px) / 2);
   }
   .portfolio-item:not(:last-child) {
-    margin-bottom: 0px;
+    margin: 0;
   }
 
   /* ------------------ */
 
-  .our-customers-container,
-  .footer-content-container {
-    max-width: 584px;
-    padding: 0 16px;
-  }
   .our-customers-list {
     column-gap: 24px;
   }
@@ -1264,7 +1273,8 @@ input:focus-within + svg {
 }
 
 @media (min-width: 1158px) {
-  .container {
+  .container,
+  .portfolio-section .container {
     width: 1158px;
     margin: 0 auto;
     padding-left: 15px;
@@ -1317,7 +1327,6 @@ input:focus-within + svg {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
-    text-align: left;
   }
   .our-work-text,
   .portfolio-list-text {
@@ -1374,7 +1383,6 @@ input:focus-within + svg {
     row-gap: 48px;
   }
   .portfolio-item {
-    margin: 0;
     width: calc((100% - 48px) / 3);
   }
 
